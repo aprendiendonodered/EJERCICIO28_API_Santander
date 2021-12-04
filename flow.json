@@ -1,1 +1,664 @@
-[]
+[
+    {
+        "id": "88fa894d1540cb62",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "88bbe218.63673",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "ab7f195c.aa0308"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 340,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "ab7f195c.aa0308",
+                        "port": "2"
+                    }
+                ]
+            },
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "ab7f195c.aa0308",
+                        "port": "0"
+                    }
+                ]
+            },
+            {
+                "x": 340,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "ab7f195c.aa0308",
+                        "port": "1"
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "MAX",
+                "type": "num",
+                "value": "100",
+                "ui": {
+                    "icon": "font-awesome/fa-thermometer-full",
+                    "type": "spinner"
+                }
+            },
+            {
+                "name": "MIN",
+                "type": "num",
+                "value": "0",
+                "ui": {
+                    "icon": "font-awesome/fa-thermometer-empty",
+                    "type": "spinner"
+                }
+            }
+        ],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "ea5e934f.a933",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "enriquecrespo.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "4572a55c.f43dac",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "64882ffa.0a3c9",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "4572a55c.f43dac",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b695d6d5.c3db08",
+        "type": "ui_group",
+        "name": "CPU",
+        "tab": "4572a55c.f43dac",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b0f16f57.d6078",
+        "type": "ui_group",
+        "name": "Memoria",
+        "tab": "4572a55c.f43dac",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "1ade6c98.dd7dd3",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "f8cdee0647403e2b",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt3.thingspeak.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e0217983c92f2fd8",
+        "type": "http request",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://datos.santander.es/api/rest/datasets/calidad_agua.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "542e3cd93b7788cd"
+            ]
+        ]
+    },
+    {
+        "id": "2e4e104a79f906d2",
+        "type": "inject",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "e0217983c92f2fd8"
+            ]
+        ]
+    },
+    {
+        "id": "050125d8f4f4c7cc",
+        "type": "debug",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "542e3cd93b7788cd",
+        "type": "json",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 160,
+        "wires": [
+            [
+                "050125d8f4f4c7cc"
+            ]
+        ]
+    },
+    {
+        "id": "15ce9681e0dc9949",
+        "type": "comment",
+        "z": "88fa894d1540cb62",
+        "name": "Analítica de Agua",
+        "info": "Información: http://datos.santander.es/resource/?ds=analitica-agua&id=8dabb37b-bec7-4924-ae9a-59396fd258a0&ft=JSON",
+        "x": 210,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "afa9b0c366b730b8",
+        "type": "http request",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://datos.santander.es/api/rest/datasets/sensores_smart_env_monitoring.json?items=332",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "81fa29f04f869048"
+            ]
+        ]
+    },
+    {
+        "id": "d4fe7bba513fd41f",
+        "type": "inject",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "afa9b0c366b730b8"
+            ]
+        ]
+    },
+    {
+        "id": "d85dbd6f25021846",
+        "type": "debug",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "81fa29f04f869048",
+        "type": "json",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "d85dbd6f25021846"
+            ]
+        ]
+    },
+    {
+        "id": "dd61e39a12cceddd",
+        "type": "comment",
+        "z": "88fa894d1540cb62",
+        "name": "Sensores Ambientales",
+        "info": "Información: http://datos.santander.es/resource/?ds=sensores-ambientales&id=cae57038-c092-4743-b575-7bcafd838e02&ft=JSON",
+        "x": 230,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "869b9b62cb2aa7c5",
+        "type": "http request",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://datos.santander.es/api/rest/datasets/sensores_smart_parking.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "5255a41f015f307a"
+            ]
+        ]
+    },
+    {
+        "id": "152de59badc8a2b5",
+        "type": "inject",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "869b9b62cb2aa7c5"
+            ]
+        ]
+    },
+    {
+        "id": "94830a3a54b48b68",
+        "type": "debug",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "5255a41f015f307a",
+        "type": "json",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "94830a3a54b48b68"
+            ]
+        ]
+    },
+    {
+        "id": "46e5965104fdf99b",
+        "type": "comment",
+        "z": "88fa894d1540cb62",
+        "name": "Sensores Parking Superficie",
+        "info": "Información: http://datos.santander.es/resource/?ds=sensores-parking-superficie&id=3b9de218-9678-4ebe-9390-b2bad7cfe6cb&ft=JSON",
+        "x": 250,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8d6550dfaa98a5a9",
+        "type": "http request",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://datos.santander.es/api/rest/datasets/control_flotas_estimaciones.json?items=1157",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 370,
+        "y": 520,
+        "wires": [
+            [
+                "0d9dfa6a81766933",
+                "8a2c80d1e17fc076"
+            ]
+        ]
+    },
+    {
+        "id": "6572a24700c4f8b4",
+        "type": "inject",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 520,
+        "wires": [
+            [
+                "8d6550dfaa98a5a9"
+            ]
+        ]
+    },
+    {
+        "id": "8a2c80d1e17fc076",
+        "type": "debug",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "86f976aa515a0f0d",
+        "type": "comment",
+        "z": "88fa894d1540cb62",
+        "name": "Estimación de pasos por parada de BUS",
+        "info": "Información: http://datos.santander.es/resource/?ds=control-flota-autobuses&id=19fe3f69-403d-43ce-ae6b-2789598cde07&ft=JSON",
+        "x": 290,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ab7f195c.aa0308",
+        "type": "switch",
+        "z": "88bbe218.63673",
+        "name": "If else",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "MIN",
+                "vt": "env"
+            },
+            {
+                "t": "gt",
+                "v": "MAX",
+                "vt": "env"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0d9dfa6a81766933",
+        "type": "debug",
+        "z": "88fa894d1540cb62",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 580,
+        "wires": []
+    }
+]
